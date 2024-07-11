@@ -1,0 +1,44 @@
+<html>
+<head>
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <link rel="stylesheet" href="public/css/map.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="icon" href="public/Recursos/Imagens/DataD_Icon.png">
+    <title>DataDengue</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+        
+</head>
+<body>
+    <div id="cabecario" style="z-index:500; transform: translate(-10px, -10px);"></div>
+    <div id="menu-button" style="z-index:503;" onclick="changeMenu()"></div>
+    <div id="menu" style="z-index:502;"></div>
+    <h1 id="text" style="font-weight:1000; height: 50px; font-size:28px; font-family: Times New Roman; transform:translate(90px, -20px); position:fixed; z-index:501;"> DataDengue </h1>
+    <img id="logo" style="float:right; position:fixed; z-index:501; width:38px; height:38px; transform: translate(295px, 15px);" src="public/Recursos/Imagens/DataD_Icon.png">
+
+    <div id="add-marker" onclick="markerAddPopup()" style="float:right; position:fixed; z-index:501; width:75px; height:75px; transform: translate(265px, 600px);"></div>
+    <div id="area-foco" style="float:right; position:fixed; z-index:501;"></div>
+    <div class="folium-map" id="map_6bf0be160836eef4626325fcb6128fb7" ></div>
+</body>
+
+    <script src="public/js/menu_map.js"></script>
+    <script src="public/js/inital.js"></script>
+    <script src="public/js/marker.js"></script>
+    <script src="public/js/skecth.js"></script>
+</html>

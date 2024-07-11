@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="public/css/main.css">
+        <link rel="stylesheet" href="public/css/cabecario.css">
+        <link rel="icon" href="public/Recursos/Imagens/DataD_Icon.png">
+        <title>DataDengue</title>
+    </head>
+
+    <body>
+        <div id="background" style="z-index:-10; position: fixed; margin: -10px -10px; width: 102%; height: 101%; border: 0px rgb(0, 0, 0);" ></div>
+        <div id="cabecario" style="transform: translate(-10px, -10px);"></div>
+        <div id="menu-button" onclick="changeMenu()"></div>
+        <div id="menu"></div>
+        <h1 id="text" style="font-weight:1000; font-size:70px; transform:translate(285px, -25px); position:fixed; z-index:11;"> DataDengue </h1>
+        <img id="logo" style="float:right; position:fixed; z-index:11; width:100px; height:100px; transform: translate(800px, 30px);" src="public/Recursos/Imagens/DataD_Icon.png">
+
+        <div id="inf" style="transform: translate(0px, 70px); font-style: normal; font-weight: normal; font-size: 50px;">
+        </div>
+
+        <script src="public/js/menu.js"></script>
+        <script>
+          let pag = "sobre";
+          
+          document.getElementById('inf').innerHTML += `
+          <br><br>
+          <h1 style="font-size: 70px; font-weight: bold;"> Dengue: <h1>
+          <div class="center-align popup-text popup-color `+"popup-"+theme+`" style="font-size: 45px; width:850px; height:530px;">
+            A dengue é uma doença infecciosa causada por um vírus transmitido pelo mosquito Aedes aegypti. Ela provoca sintomas como febre alta, dores no corpo e manchas vermelhas na pele. Embora não tenha tratamento específico, a dengue pode ser fatal em alguns casos. 
+            Sua incidência aumenta no verão, especialmente em dias quentes e úmidos
+          </div>
+          <br>
+          <img style="width: 100%; height:600px;" src="https://th.bing.com/th/id/R.dab740deac39d67f03b090e5ff4d612e?rik=RnHmDCihT8RJ6Q&riu=http%3a%2f%2fwww.drugsbanks.com%2fwp-content%2fuploads%2f2017%2f08%2fmosquito-542156_1920.jpg&ehk=cEM9zGYP4ht%2fQB65ah3snCYLvlJT3Z1tvXhWA%2fWvETY%3d&risl=&pid=ImgRaw&r=0">
+          <br><br><br>
+          <h1 style="font-size: 70px; font-weight: bold;"> Dengue no Brasil (2024): <h1>
+          <div class="center-align popup-text popup-color `+"popup-"+theme+`" style="font-size: 60px; width:850px; height:330px;">
+              Casos confirmados: 2.010.896<br>
+              Mortes: 3.000<br>
+          </div>
+          <br><br><br>
+          <h1 style="font-size: 70px; font-weight: bold;"> Aplicativo DataDengue: </h1>
+          <div class="center-align popup-text popup-color `+"popup-"+theme+`" style="font-size: 45px; width:850px; height:450px;">
+            O DataDengue, criado pelo BeatFly Team, é um aplicativo que identifica e lista locais com incidência de dengue. 
+            Ele é uma ferramenta essencial para o monitoramento e controle de focos do mosquito Aedes aegypti, contribuindo significativamente para a saúde pública.
+          </div>
+          <br>
+          <img style="width: 100%; height:900px;" src="/Recursos/Imagens/DataD_Icon.png">
+          
+          `
+        </script>
+    </body> 
+</html>

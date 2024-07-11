@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="public/css/main.css">
+        <link rel="stylesheet" href="public/css/cabecario.css">
+        <link rel="icon" href="public/Recursos/Imagens/DataD_Icon.png">
+        <title>DataDengue</title>
+    </head>
+
+    <body>
+        <div id="background" style=" z-index:-10; position: fixed; margin: -10px -10px; width: 102%; height: 101%; border: 0px rgb(0, 0, 0);" ></div>
+        <div id="cabecario" style="transform: translate(-10px, -10px);"></div>
+        <div id="menu-button" onclick="changeMenu()"></div>
+        <div id="menu"></div>
+        <h1 id="text" style="font-weight:1000; font-size:70px; transform:translate(285px, -25px); position:fixed; z-index:11;"> DataDengue </h1>
+        <img id="logo" style="float:right; position:fixed; z-index:11; width:100px; height:100px; transform: translate(800px, 30px);" src="public/Recursos/Imagens/DataD_Icon.png">
+
+        <div id="inf" style="transform: translate(0px, 70px); font-style: normal; font-weight: normal; font-size: 50px;">
+        </div>
+
+        <script src="public/js/menu.js"></script>
+        <script>
+          let pag = "contatos";
+
+          
+          document.getElementById('inf').innerHTML += `
+          <br><br>
+          <div class="center-align popup-text popup-color `+"popup-"+theme+`" style="font-size: 45px; width:850px; height:450px;">
+            O DataDengue, criado pelo BeatFly Team, é um aplicativo que identifica e lista locais com incidência de dengue. 
+            Ele é uma ferramenta essencial para o monitoramento e controle de focos do mosquito Aedes aegypti, contribuindo significativamente para a saúde pública.
+          </div>
+          <h1 style="font-weight: bold; font-size: 70px;"> CONTATOS: <h1>
+          <div class="center-align popup-color `+"popup-"+theme+`" style="font-size: 45px; width:850px; height:450px;">
+            <img style="width: 100px; height: 80px; border-radius: 25px;" src="/Recursos/Imagens/gmail.png">
+            <a style="font-size: 45px; font-weight: normal;" href="mailto:beatflyteam@gmail.com"> beatflyteam@gmail.com</a>
+            <br><br>
+            <img style="width: 100px; height: 80px; border-radius: 25px;" src="/Recursos/Imagens/yt.png">
+            <a style="font-size: 45px; font-weight: normal;" href="https://www.youtube.com/@BeatFlyTEAM">BeatFly YT</a>
+          </div>
+          `
+        </script>
+    </body> 
+</html>

@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="icon" href="public/Recursos/Imagens/DataD_Icon.png">
+    <title>DataDengue</title>
+  </head>
+
+  <body bgcolor="#000000">
+    <div id="background" style="z-index:-10; position: fixed; margin: -10px -10px; width: 102%; height: 101%; border: 0px rgb(0, 0, 0);" ></div>
+    <div id="title" class="" style="font-size: 45px;"></div>
+    <form id="exit" method="post"></form> 
+    <div id="boxes" style=" margin: -55px 0px; font-size: 45px;" ></div>
+
+    <script>
+      let id = localStorage.getItem("id");
+      let theme = localStorage.getItem("theme");
+
+      fetch('public/server/marker.json')
+      .then(response => response.json())
+      .then(json => {
+        let obj = json.marcadores[id / 2].num;
+        document.getElementById('title').innerHTML =
+        '<h1 class="'+theme+'" > Histórico da residência número: '+obj+'</h1>';
+      })
+
+      fetch('public/server/history.json')
+      .then(response => response.json())
+      .then(json => {
+        json.id[id / 2].history.reverse().map((obj) => {
+        let status;
+        if (obj.status == 0) {
+          status = "Com foco de dengue";
+        } else {
+          status = "Sem foco de dengue";
+        }
+        document.getElementById('boxes').innerHTML +=
+         `<div style="
+          height: 200px;
+          border: 4px outset rgb(0, 0, 0);
+          font-size: 55px;"
+          > Status: `+status+` <br> Data: `+obj.date+` </div>`;
+        })
+      })
+      
+      changeTheme();
+
+      function changeTheme() {
+        document.getElementById('background').classList.add(theme);
+        document.getElementById('boxes').classList.add(theme);
+      }
+      document.getElementById('exit').innerHTML += '<button name="change" type="input" value="/map" class="exit '+theme+'"> x </button>';
+    </script>
+  </body>
+</html>

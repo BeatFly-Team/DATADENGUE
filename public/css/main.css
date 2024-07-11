@@ -1,0 +1,57 @@
+.dark {
+    background-color: rgb(30, 30, 30);
+    color:rgb(255, 255, 255);
+    border:rgb(255, 255, 255);
+}
+.light {
+    background-color: rgb(240, 240, 240);
+    color:rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+}
+.dark-input {
+    background-color: rgb(30, 30, 30);
+    color:rgb(255, 255, 255);
+}
+.light-input {
+    background-color: rgb(240, 240, 240);
+    color:rgb(0, 0, 0);
+}
+
+.exit {
+    border-radius: 0%;
+    margin: -70 0;
+    transform: translate(-22px, -110px);
+    position: absolute;
+    right: 0;
+    cursor:pointer;
+    font-size: 100px;
+}
+
+.center-align {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup-color {
+    border-radius: 20px;
+}
+
+.popup-text {
+    font-weight:normal;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    text-align:justify;
+    display: flex;
+}
+
+.popup-light {
+    color:rgb(55, 150, 55);
+    background-color:rgba(200, 255, 200);
+    border: 15px solid rgb(200, 255, 200);
+}
+.popup-dark {
+    color:rgb(200, 255, 200);
+    background-color:rgba(55, 150, 55);
+    border: 15px solid rgb(55, 150, 55);
+}

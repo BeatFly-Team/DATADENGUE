@@ -1,0 +1,116 @@
+.cabecario-light {
+    z-index:10; 
+    position: fixed; 
+    width: 102%; 
+    height: 160px; 
+    background-color:rgb(200, 255, 200);
+    border-width: 0 0 15px 0;
+    border-style: none none solid none;
+    border-color: rgb(55, 150, 55);
+}
+.cabecario-dark {
+    z-index:10; 
+    position: fixed; 
+    width: 102%; 
+    height: 160px; 
+    background-color: rgb(55, 150, 55);
+    border-width: 0 0 15px 0;
+    border-style: none none solid none;
+    border-color: rgb(200, 255, 200);
+}
+
+.menu-button-open {
+    z-index:11; 
+    position: fixed; 
+    transform: translate(0px, 0px);
+    width: 170px;
+    height: 150px;
+}
+.menu-button-close {
+    z-index:12; 
+    position: fixed;
+    font-size: 120px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transform: translate(50px, 0px);
+    width: 100px;
+    height: 100px;
+}
+.menu {
+    z-index:11;
+    transform: translate(-10px, 0px);
+    position: fixed; 
+    width: 500px;
+    align-items: center;
+    text-align:center;
+    height: 900px;
+    border-width: 20px;
+}
+.changePage {
+    width: 500px;
+    height: 100px;
+    text-align:justify;
+    border-radius: 20px;
+    border-width: 0px;
+    font-size: 50px;
+}
+
+.selecionadoButton-dark {
+    background-color:rgba(200, 255, 200);
+    color:rgb(55, 150, 55);
+}
+.selecionadoButton-light {
+    background-color:rgba(55, 150, 55);
+    color:rgb(200, 255, 200);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid rgba(55, 150, 55);
+    background-color: rgba(200, 255, 200);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 60px;
+    border-radius: 34px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(55, 150, 55);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    border: 5px solid rgb(200, 255, 200);
+    background-color: rgb(55, 150, 55);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    background-color: rgb(200, 255, 200);
+    transform: translateX(70px);
+}
